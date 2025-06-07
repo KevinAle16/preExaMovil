@@ -13,22 +13,17 @@
     <string name="puesto_1">Auxiliar</string>
     <string name="puesto_2">Albañil</string>
     <string name="puesto_3">Ing. obra</string>
-
     <string name="subtotal_default">Subtotal: $0.00</string>
     <string name="subtotal">Subtotal: $%.2f</string>
     <string name="impuesto_default">Impuesto: $0.00</string>
     <string name="impuesto">Impuesto: $%.2f</string>
     <string name="total_default">Total: $0.00</string>
     <string name="total">Total: $%.2f</string>
-
     <string name="calcular">Calcular</string>
     <string name="limpiar">Limpiar</string>
     <string name="regresar">Regresar</string>
     <string name="sslir">Salir</string>
 
-    <string name="error_calculo">Error en los datos ingresados</string>
-
-    <string name="hint_numero">Número de empleado</string>
     <string name="hint_nombre_empl">Nombre del empleado</string>
     <string name="entrar">Entrar</string>
 
