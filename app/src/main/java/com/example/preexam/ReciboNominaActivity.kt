@@ -49,30 +49,25 @@ class ReciboNominaActivity : AppCompatActivity() {
         lblNombre = findViewById(R.id.lblNombre)
         txtHorasNormales = findViewById(R.id.txtHorasNormales)
         txtHorasExtras = findViewById(R.id.txtHorasExtras)
-
         rbPuesto1 = findViewById(R.id.rbPuesto1)
         rbPuesto2 = findViewById(R.id.rbPuesto2)
         rbPuesto3 = findViewById(R.id.rbPuesto3)
-
         lblSubtotal = findViewById(R.id.lblSubtotal)
         lblImpuesto = findViewById(R.id.lblImpuesto)
         lblTotal = findViewById(R.id.lblTotal)
-
         btnCalcular = findViewById(R.id.btnCalcular)
         btnLimpiar = findViewById(R.id.btnLimpiar)
         btnRegresar = findViewById(R.id.btnRegresar)
 
         val strNombre = intent.getStringExtra("nombre").toString()
-        lblNombre.text = getString(R.string.nombre_empleado) + " " + strNombre
-
         val folio = intent.getIntExtra("recibo", 0)
+        lblNombre.text = getString(R.string.nombre_empleado) + " " + strNombre
         lblNumRecibo.text = getString(R.string.num_recibo) + " " + folio
     }
 
     fun eventosClic() {
         btnCalcular.setOnClickListener {
             val recibo = ReciboNomina()
-
             if (txtHorasNormales.text.toString().isEmpty() || txtHorasExtras.text.toString().isEmpty()) {
                 Toast.makeText(this, "Falta capturar horas trabajadas", Toast.LENGTH_SHORT).show()
             } else {
@@ -88,8 +83,6 @@ class ReciboNominaActivity : AppCompatActivity() {
                         else -> 0
                     }
                     recibo.numRecibo = intent.getIntExtra("recibo", 0)
-
-
                     lblSubtotal.text = getString(R.string.subtotal, recibo.calcularSubtotal())
                     lblImpuesto.text = getString(R.string.impuesto, recibo.calcularImpuesto())
                     lblTotal.text = getString(R.string.total, recibo.calcularTotal())
